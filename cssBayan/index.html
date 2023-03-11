@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cssBayan</title>
+  </head>
+  <style>
+    p {
+      text-align: center;
+    }
+    .bayan {
+      border-radius: 3px;
+      margin: auto;
+      text-align: center;
+      width: 50%;
+      padding: 0;
+      background: #ddd;
+    }
+
+    /* #bayan_first {
+      margin: auto;
+      text-align: center;
+      width: 50%;
+      padding: 1.2em;
+      background: #ddd;
+    } */
+
+    .bayan_label {
+      display: block;
+      background-color: #ddd;
+      color: black;
+      text-align: left;
+      font-weight: normal;
+      cursor: pointer;
+      padding: 1.2em;
+    }
+
+    .bayan_item {
+      color: black;
+      border-top: 1px solid gray;
+      width: 80%;
+      margin: auto;
+    }
+
+    .accordion {
+      position: absolute;
+      display: none;
+    }
+
+    .item_image {
+      border: 0;
+      height: 1px;
+      padding: 0;
+      width: 1px;
+      background-color: #ddd;
+    }
+
+    .accordion:checked ~ .item_image {
+      position: static;
+      overflow: visible;
+      clip: auto;
+      margin: auto;
+      padding: 1.2rem;
+      width: auto;
+      height: auto;
+      -webkit-animation: fadeIn ease-in 0.5s;
+      -moz-animation: fadeIn ease-in 0.5s;
+      animation: fadeIn ease-in 0.5s;
+    }
+
+    @-moz-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .radio {
+      display: none;
+    }
+    img {
+      max-width: 80%;
+    }
+  </style>
+  <body>
+    <div class="bayan" id="bayan_first">CSS Bayan</div>
+    <div class="bayan">
+      <div class="bayan_item">
+        <input
+          type="radio"
+          class="accordion"
+          name="bayan_block"
+          id="item_1"
+          checked
+          hidden
+        />
+        <label class="bayan_label" for="item_1">first block</label>
+        <div class="item_image"><img src="img/mem1.jpg" alt="mem1" /></div>
+      </div>
+      <div class="bayan_item">
+        <input
+          type="radio"
+          class="accordion"
+          name="bayan_block"
+          id="item_2"
+          hidden
+        />
+        <label class="bayan_label" for="item_2">second block</label>
+        <div class="item_image"><img src="img/mem2.jpg" alt="mem2" /></div>
+      </div>
+      <div class="bayan_item">
+        <input
+          type="radio"
+          class="accordion"
+          name="bayan_block"
+          id="item_3"
+          hidden
+        />
+        <label class="bayan_label" for="item_3">third block</label>
+        <div class="item_image"><img src="img/mem3.jpg" alt="mem3" /></div>
+      </div>
+    </div>
+  </body>
+</html>
