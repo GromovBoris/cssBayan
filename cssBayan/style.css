@@ -1,12 +1,17 @@
+/*сбросили заводские настройки*/
+
 .body {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
 }
+
+/**/
+
 .bayan {
   font-family: Comic Sans MS, Comic Sans, cursive;
-  font-size: 16px;
+  font-size: 2rem;
   border-radius: 0.3rem;
   margin: auto;
   text-align: center;
@@ -18,24 +23,18 @@
 .bayan_label {
   font-size: 1em;
   color: blue;
-  display: block;
-  background-color: #ddd;
+  /* display: block; */
+  /* background-color: #ddd; */
   text-align: left;
-  font-weight: normal;
+  /* font-weight: normal; */
   cursor: pointer;
 }
 
 .bayan_item {
-  color: black;
   border-top: 0.1rem solid gray;
   width: 80%;
   margin: auto;
   cursor: pointer;
-}
-
-.accordion {
-  position: absolute;
-  display: none;
 }
 
 .item_image {
@@ -46,14 +45,13 @@
   background-color: #ddd;
 }
 
-.accordion:checked ~ .item_image {
+.bayan_item input:checked ~ .item_image {
   position: static;
-  overflow: visible;
-  clip: auto;
-  margin: auto;
-  padding: 1.2rem;
   width: auto;
   height: auto;
+  margin: auto;
+  padding: 1rem;
+  overflow: visible;
   animation: fadeIn ease-in 0.5s;
 }
 
@@ -69,6 +67,7 @@
 .radio {
   display: none;
 }
+
 img {
   max-width: 80%;
 }
@@ -76,10 +75,12 @@ img {
 .item_header {
   display: flex;
 }
+
 .item_title {
   width: 97%;
   padding: 0.5em;
 }
+
 .item_icon {
   width: 3%;
   margin-right: 0;
@@ -93,4 +94,14 @@ img {
 
 .bayan_item input:checked ~ .bayan_label .item_header img {
   transform: rotate(45deg);
+}
+
+.bayan_item input:hover ~ .item_image {
+  /* position: static; */
+  width: auto;
+  height: auto;
+  margin: auto;
+  padding: 1rem;
+  overflow: visible;
+  animation: fadeIn ease-in 0.5s;
 }
