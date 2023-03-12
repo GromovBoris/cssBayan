@@ -3,169 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>cssBayan</title>
   </head>
-  <style>
-    p {
-      text-align: center;
-    }
-    .bayan {
-      border-radius: 3px;
-      margin: auto;
-      text-align: center;
-      width: 50%;
-      padding: 0;
-      background: #ddd;
-    }
 
-    /* #bayan_first {
-      margin: auto;
-      text-align: center;
-      width: 50%;
-      padding: 1.2em;
-      background: #ddd;
-    } */
-
-    .bayan_label {
-      display: block;
-      background-color: #ddd;
-      color: black;
-      text-align: left;
-      font-weight: normal;
-      cursor: pointer;
-      padding: 1.2em;
-    }
-
-    .bayan_item {
-      color: black;
-      border-top: 1px solid gray;
-      width: 80%;
-      margin: auto;
-    }
-
-    .accordion {
-      position: absolute;
-      display: none;
-    }
-
-    .item_image {
-      border: 0;
-      height: 1px;
-      padding: 0;
-      width: 1px;
-      background-color: #ddd;
-    }
-
-    .accordion:checked ~ .item_image {
-      position: static;
-      overflow: visible;
-      clip: auto;
-      margin: auto;
-      padding: 1.2rem;
-      width: auto;
-      height: auto;
-      -webkit-animation: fadeIn ease-in 0.5s;
-      -moz-animation: fadeIn ease-in 0.5s;
-      animation: fadeIn ease-in 0.5s;
-    }
-
-    @-moz-keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    @-webkit-keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-    .radio {
-      display: none;
-    }
-    img {
-      max-width: 80%;
-    }
-  </style>
   <body>
-    <div class="bayan" id="bayan_first">CSS Bayan of my skills</div>
-    <div class="bayan">
-      <div class="bayan_item">
-        <input
-          type="radio"
-          class="accordion"
-          name="bayan_block"
-          id="item_1"
-          checked
-          hidden
-        />
-        <label class="bayan_label" for="item_1">hard studing English</label>
-        <div class="item_image"><img src="img/mem1.jpg" alt="mem1" /></div>
-      </div>
-      <div class="bayan_item">
-        <input
-          type="radio"
-          class="accordion"
-          name="bayan_block"
-          id="item_2"
-          hidden
-        />
-        <label class="bayan_label" for="item_2">fear of the Git</label>
-        <div class="item_image"><img src="img/mem2.jpg" alt="mem2" /></div>
-      </div>
-      <div class="bayan_item">
-        <input
-          type="radio"
-          class="accordion"
-          name="bayan_block"
-          id="item_3"
-          hidden
-        />
-        <label class="bayan_label" for="item_3">in love with CSS</label>
-        <div class="item_image"><img src="img/mem3.jpg" alt="mem3" /></div>
-      </div>
-      <div class="bayan_item">
-        <input
-          type="radio"
-          class="accordion"
-          name="bayan_block"
-          id="item_4"
-          checked
-          hidden
-        />
-        <label class="bayan_label" for="item_4"
-          >elementary logic, some luck and JS</label
-        >
-        <div class="item_image"><img src="img/mem4.jpg" alt="mem4" /></div>
-      </div>
-      <div class="bayan_item">
-        <input
-          type="radio"
-          class="accordion"
-          name="bayan_block"
-          id="item_5"
-          checked
-          hidden
-        />
-        <label class="bayan_label" for="item_5"
-          >perhaps, i`m ready for junior</label
-        >
-        <div class="item_image"><img src="img/mem5.jpg" alt="mem5" /></div>
+    <div class="wrapper">
+      <div class="bayan">
+        <div class="bayan_title">
+          <h2>CSS Bayan of my skills</h2>
+        </div>
+        <div class="bayan_item">
+          <input
+            type="radio"
+            class="accordion"
+            name="bayan_block"
+            id="item_1"
+            checked
+            hidden
+          />
+          <label class="bayan_label" for="item_1"
+            ><div class="item_header">
+              <div class="item_title">Hard studing English</div>
+              <img src="img/plus.svg" alt="button" class="item_icon" />
+            </div>
+          </label>
+          <div class="item_image"><img src="img/mem1.jpg" alt="mem1" /></div>
+        </div>
+        <div class="bayan_item">
+          <input
+            type="radio"
+            class="accordion"
+            name="bayan_block"
+            id="item_2"
+            hidden
+          />
+          <label class="bayan_label" for="item_2"
+            ><div class="item_header">
+              <div class="item_title">Fear of the Git</div>
+              <img src="img/plus.svg" alt="button" class="item_icon" />
+            </div>
+          </label>
+          <div class="item_image"><img src="img/mem2.jpg" alt="mem2" /></div>
+        </div>
+        <div class="bayan_item">
+          <input
+            type="radio"
+            class="accordion"
+            name="bayan_block"
+            id="item_3"
+            hidden
+          />
+          <label class="bayan_label" for="item_3"
+            ><div class="item_header">
+              <div class="item_title">In love with CSS</div>
+              <img src="img/plus.svg" alt="button" class="item_icon" />
+            </div>
+          </label>
+          <div class="item_image"><img src="img/mem3.jpg" alt="mem3" /></div>
+        </div>
+        <div class="bayan_item">
+          <input
+            type="radio"
+            class="accordion"
+            name="bayan_block"
+            id="item_4"
+            hidden
+          />
+          <label class="bayan_label" for="item_4"
+            ><div class="item_header">
+              <div class="item_title">Elementary logic, some luck and JS</div>
+              <img src="img/plus.svg" alt="button" class="item_icon" />
+            </div>
+          </label>
+          <div class="item_image"><img src="img/mem4.jpg" alt="mem4" /></div>
+        </div>
+        <div class="bayan_item">
+          <input
+            type="radio"
+            class="accordion"
+            name="bayan_block"
+            id="item_5"
+            hidden
+          />
+          <label class="bayan_label" for="item_5"
+            ><div class="item_header">
+              <div class="item_title">Perhaps, I`m ready for junior</div>
+              <img src="img/plus.svg" alt="button" class="item_icon" />
+            </div>
+          </label>
+          <div class="item_image"><img src="img/mem5.jpg" alt="mem5" /></div>
+        </div>
       </div>
     </div>
   </body>
